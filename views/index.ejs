@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MUFC</title>
+</head>
+<body>
+Glory Glory Man Utd!!
+<form action="/goals" method="POST">
+    <input type="text" placeholder="Player" name="player">
+    <input type="text" placeholder="Goals" name="goals">
+    <button type="submit">Submit</button>
+</form>
+
+<div>
+    <h2>Update data by clicking below</h2>
+    <button id="update"> Update </button>
+</div>
+
+<div>
+    <h2>Delete data by clicking below</h2>
+    <button id="delete"> Delete </button>
+</div>
+
+<ul class="quotes">
+    <% for(var i=0; i<goals.length; i++) {%>
+    <li class="quote">
+        <span><%= goals[i].player %></span>
+        <span><%= goals[i].goals %></span>
+    </li>
+    <% } %>
+</ul>
+
+<script src="main.js"></script>
+
+</body>
+</html>
+
